@@ -8,6 +8,7 @@
 			<th>Brand Name</th>
 			<th>Color Name</th>
 			<th>Daily Price</th>
+			<th>#</th>
 		</tr>
 	</thead>
 	<tr *ngFor="let car of cars">
@@ -15,5 +16,6 @@
 		<td>{{car.brandName}}</td>
 		<td>{{car.colorName}}</td>
 		<td>{{car.dailyPrice}}</td>
+		<td><button routerLink="/cars/details/{{car.id}}">Detail</button></td>
 	</tr>
 </table>
