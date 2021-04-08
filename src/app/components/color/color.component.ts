@@ -10,6 +10,7 @@ import { ColorService } from 'src/app/services/color.service';
 export class ColorComponent implements OnInit {
   colors:Color[] = [];
   currentColor:Color;
+  filterText="";
   
   constructor(private colorService:ColorService) {}
 
@@ -45,5 +46,7 @@ export class ColorComponent implements OnInit {
   
   setCurrentColorFlush(){
 	 this.currentColor = null;
+	 this.filterText="";
+	 this.getColors();
   }
 }

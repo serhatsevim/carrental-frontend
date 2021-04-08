@@ -10,6 +10,7 @@ import { BrandService } from 'src/app/services/brand.service';
 export class BrandComponent implements OnInit {  
   brands : Brand[] = [];
   currentBrand : Brand;
+  filterText="";
   
   constructor(private brandService:BrandService) {}
 
@@ -45,5 +46,7 @@ export class BrandComponent implements OnInit {
   
   setCurrentBrandFlush(){
 	  this.currentBrand = null;
+	  this.filterText="";
+	  this.getBrands();
   }
 }
